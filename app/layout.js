@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google"
 import { ClerkProvider } from "@clerk/nextjs";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,14 +19,17 @@ export default function RootLayout({ children }) {
         <body
           className={inter.className}
         >
+
           {/* Header */}
           <Header />
           <main className="min-h-screen">
             {children}
           </main>
           {/* Footer */}
-          <footer className="bg-blue-50 py-12">
-            <div className="container mx-auto text-center text-gray-600">
+          <footer className="bg-black/80 border-t border-gray-600 text-white/70 tracking-wider py-4">
+            <div className="container mx-auto text-center flex items-center justify-center">
+              <p>&copy; 2024 Penny Plan</p>
+              <Separator orientation="vertical" className="mx-2 h-6 w-px" />
               <p>Made by Aryan Sharma</p>
             </div>
           </footer>
