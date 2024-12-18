@@ -16,13 +16,13 @@ const Header = () => {
         </Link>
         <div className="flex items-center space-x-4">
           <SignedIn>
-            <Link href="/dashboard" className="text-gray-500 hover:text-gray-800 flex items-center gap-2">
+            <Link href="/dashboard" className="text-gray-500 hover:text-emerald-800 flex items-center gap-2">
               <Button variant="outline">
                 <LayoutDashboardIcon size={20}/>
                 <span className="hidden md:inline">Dashboard</span>
               </Button>
             </Link>
-            <Link href="/dashboard" className="text-gray-500 hover:text-gray-800 flex items-center gap-2">
+            <Link href="/dashboard" className="text-gray-500 hover:text-emerald-800 flex items-center gap-2">
               <Button variant="outline">
                 <PenBoxIcon size={20}/>
                 <span className="hidden md:inline">Add Transaction</span>
@@ -33,7 +33,7 @@ const Header = () => {
 
         <SignedOut>
           <SignInButton forceRedirectUrl='/dashboard'>
-          <Button variant="outline">Log In</Button>
+          <Button variant="outline" className="text-gray-500 hover:text-emerald-800 hover:bg-gray-100">Log In</Button>
           </SignInButton>
         </SignedOut>
         <SignedIn>
