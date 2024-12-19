@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           {/* Footer */}
-          <footer className="bg-black/80 border-t border-gray-600 text-white/70 tracking-wider py-4">
+          <footer className="bg-black/80 border-t border-gray-600 text-white/70 tracking-wider text-sm py-4">
             <div className="container mx-auto text-center flex items-center justify-center">
               <p>&copy; 2024 Penny Plan</p>
               <Separator orientation="vertical" className="mx-2 h-6 w-px" />

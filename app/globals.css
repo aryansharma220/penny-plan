@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 @layer base {
   :root {
+    --bg-image: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -82,9 +85,28 @@ body {
   * {
     @apply border-border;
   }
+
+  .bg-blur {
+    background-color: transparent;
+  }
+
+  .bg-blur::before {
+    content: '';
+    background-image: var(--bg-image);
+    background-size: cover;
+    height: 115vh;
+    width: 100%;
+    position: absolute;
+    filter: blur(30px);
+    z-index: -1;
+  }
+
+
   body {
     @apply bg-gradient-to-br from-black via-black/90 to-black text-white;
   }
+
+
 }
 
 
@@ -94,11 +116,11 @@ body {
   }
 
   .gradient-title{
-    @apply gradient font-extrabold tracking-tighter pr-2 pb-3 text-transparent bg-clip-text shadow-lg
+    @apply gradient font-extrabold tracking-tighter pr-2 pb-3 text-transparent bg-clip-text
   }
 
   .gradient-subtitle{
-    @apply bg-gradient-to-br from-gray-700 to-gray-300 font-semibold tracking-wide pr-2 pb-3 text-transparent bg-clip-text
+    @apply bg-gradient-to-br from-gray-400 to-gray-300 font-semibold tracking-wide pr-2 pb-3 text-transparent bg-clip-text
   }
 
 }
@@ -116,5 +138,27 @@ body {
 }
 
 .hero-image.scrolled{
-  transform: rotateX(0deg) scale(1) translateY(40px);
+  transform: rotateX(0deg) scale(.9) translateY(40px);
+}
+
+
+
+.working-card {
+  background: #262626;
+  border-radius: 10px;
+  border: 1px solid #3F3F40;
+  
+}
+
+.working-card:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+  background: transparent;
+  box-shadow: 0px 0px 0px 1px #3F3F40;
+  filter: drop-shadow(0px 0px 10px rgb(151, 243, 216));
+}
+
+.ready-bg {
+  background: url('/working-bg.webp') no-repeat center center fixed;
+  background-size: cover;
 }

@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image className="cursor-pointer object-contain invert" src="/logo.webp" alt="Penny Plan" width={60} height={60} />
-          <span className="text-2xl font-bold">Penny Plan</span>
+          <span className="text-2xl font-bold hidden sm:inline text-emerald-200">Penny Plan</span>
         </Link>
         <div className="flex items-center space-x-4">
           <SignedIn>
