@@ -4,9 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { LayoutDashboardIcon, PenBoxIcon } from 'lucide-react';
+import { checkUser } from '@/lib/checkUser';
 
 
-const Header = () => {
+const Header = async() => {
+
+  await checkUser();
+
   return (
     <div className="fixed top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-gray-600  ">
       <nav className="px-4 py-4 flex justify-between items-center">
