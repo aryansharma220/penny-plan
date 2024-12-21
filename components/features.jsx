@@ -6,7 +6,7 @@ const Features = () => {
     <div className='px-20 py-10'>
       <div className='flex flex-col gap-10'>
         <div className='text-center'>
-          <h1 className='text-4xl font-bold'>Everything You Need To Manage Your Finances</h1>
+          <h1 className='text-4xl font-bold text-white'>Everything You Need To Manage Your Finances</h1>
         </div>
         <div className='grid grid-cols-3 gap-x-20 gap-y-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {featuresData.map((item, index) => (

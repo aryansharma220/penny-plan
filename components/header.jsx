@@ -20,14 +20,14 @@ const Header = async() => {
         </Link>
         <div className="flex items-center space-x-4">
           <SignedIn>
-            <Link href="/dashboard" className="text-gray-500 hover:text-emerald-800 flex items-center gap-2">
-              <Button variant="outline">
+            <Link href="/dashboard" >
+              <Button variant="outline" className="text-black hover:text-emerald-800 flex items-center gap-2">
                 <LayoutDashboardIcon size={20}/>
                 <span className="hidden md:inline">Dashboard</span>
               </Button>
             </Link>
-            <Link href="/dashboard" className="text-gray-500 hover:text-emerald-800 flex items-center gap-2">
-              <Button variant="outline">
+            <Link href="/dashboard">
+              <Button className="text-white bg-emerald-800 flex items-center gap-2 hover:bg-emerald-600" >
                 <PenBoxIcon size={20}/>
                 <span className="hidden md:inline">Add Transaction</span>
               </Button>

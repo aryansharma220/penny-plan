@@ -36,7 +36,7 @@ export default function Home() {
           <Working />
         </div>
         <div data-aos="zoom-in-up">
-          <section className="py-20 ready-bg">
+          <section className="py-20 ready-bg text-white">
             <div className="backdrop-blur-xl py-10 mx-10">
               <div className="text-center">
                 <h1 className="text-4xl font-bold">Ready To Get Started?</h1>
